@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
 
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email', 191)->unique();
             $table->decimal('phone', 10, 0);
             $table->enum('role', ['user', 'admin'])->default('user');
             $table->string('profilePic');
