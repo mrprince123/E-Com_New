@@ -16,7 +16,7 @@
 
     <div id="default-carousel" class="relative w-full mt-10 mb-10" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-96 overflow-hidden rounded-lg">
+        <div class="relative h-72  rounded-xl">
 
             @forelse ($carousel as $item)
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -97,7 +97,7 @@
     </div>
 
     {{-- category product  --}}
-    <h1 class="text-center text-2xl font-semibold mb-5">Categories</h1>
+    <h1 class="text-center text-3xl font-semibold mb-5">Categories</h1>
     <div class="grid grid-cols-5 gap-4 mb-10 mt-10">
         @forelse ($category as $item)
             @if ($item->id <= 16)
@@ -106,10 +106,10 @@
 
                     <div class="text-center flex flex-col items-center ">
                         <img class="rounded-full w-48 h-48 object-cover mb-3 border-4 border-red-500 hover:border-4 hover:border-yellow-500"
-                            src="{{ asset('storage/' . $item->categoryImg) }}" alt="">
+                            src="{{ asset('storage/' . $item->categoryImg) }}" alt="Category Image">
                         @php
                             $name = ucwords($item->name);
-                            echo "<p class='font-bold text-2xl hover:text-red-500'>$name</p>";
+                            echo "<h4 class='font-bold text-yellow-500 hover:text-red-500'>$name</h4>";
                         @endphp
                     </div>
 
@@ -122,7 +122,7 @@
 
     {{-- Here show the Small About  --}}
     <div class="flex w-full bg-pink-100 mt-10 mb-10 rounded-xl">
-        <img class="w-1/2  h-96 object-cover rounded-xl" src="images/ecommerce3.jpg" alt="">
+        <img class="w-1/2  h-[32rem] object-cover rounded-xl" src="images/ecommerce3.jpg" alt="">
         <div class="w-1/2 flex justify-center flex-col gap-4 bg-blue-50 rounded-xl p-4">
             <h2 class="font-bold">ECOM <i class="text-yellow-500 font-bold">EXPRESS</i></h2>
             <h1 class="text-2xl font-bold">Stay Productive, Always Buy Product</h1>
@@ -137,7 +137,7 @@
         <div class=" p-2 m-2">
             @php
                 $name = ucwords($data->name);
-                echo " <h2 class='font-bold text-xl mb-2'>$name</h2>";
+                echo " <h2 class='font-bold text-3xl mb-2'>$name</h2>";
             @endphp
             <div class="w-full m-auto grid grid-cols-4 gap-2">
                 @forelse ($data->products as $item)

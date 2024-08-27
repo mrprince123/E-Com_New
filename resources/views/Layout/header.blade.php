@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite('resources/css/app.css')
-
     @stack('title')
+
     {{-- Tailwind CDN --}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 
     {{-- Font Awesome CDN --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,8 +19,6 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
 
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -45,8 +42,8 @@
             @endphp
 
             @guest
-                <a href="{{ url('/') }}" title="Home" class="hover:text-yellow-500">Home</a>
-                <a href="{{ url('/category') }}" title="Product" class="hover:text-yellow-500">Products</a>
+                <a href="{{ url('/') }}" title="Home" class="text-white hover:text-yellow-500">Home</a>
+                <a href="{{ url('/category') }}" title="Product" class="text-white hover:text-yellow-500">Products</a>
                 <a href="{{ url('/login') }}"><i
                         class="text-yellow-500 hover:text-white fa-solid fa-arrow-right-to-bracket text-xl"
                         title="Login"></i></a>
@@ -57,9 +54,9 @@
                     // echo $userImage;
                 @endphp
 
-                <a href="{{ url('/') }}" title="Home" class="hover:text-yellow-500">Home</a>
-                <a href="{{ url('/category') }}" title="Product" class="hover:text-yellow-500">Products</a>
-                <a href="{{ url('/order') }}" title="Product" class="hover:text-yellow-500">Orders</a>
+                <a href="{{ url('/') }}" title="Home" class="text-white hover:text-yellow-500">Home</a>
+                <a href="{{ url('/category') }}" title="Product" class="text-white hover:text-yellow-500">Products</a>
+                <a href="{{ url('/order') }}" title="Product" class="text-white hover:text-yellow-500">Orders</a>
 
                 <button type="button"
                     class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-yellow-500 rounded-lg hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -101,7 +98,5 @@
                 </button>
 
             @endguest
-
-
         </div>
     </header>

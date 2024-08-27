@@ -151,7 +151,7 @@
                             <label for="detail_description" class="font-semibold">Details Description</label>
 
                             <div class="m-2">
-                                <textarea name="detail_description" id="input_editor" class="rounded-lg h-80 border-2 p-2 m-2 h-96" cols="30"
+                                <textarea name="detail_description" id="input_editor" class="rounded-lg h-80 border-2 p-2 m-2" cols="30"
                                     rows="10" placeholder="Details Description"></textarea>
                             </div>
 

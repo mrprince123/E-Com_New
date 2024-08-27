@@ -44,16 +44,6 @@ class AddressController extends Controller
     public function store(RequestsAddress $request)
     {
         try {
-            // $address = new Address();
-            // $address->name = $request['name'];
-            // $address->phone = $request['phone'];
-            // $address->user_id = $userId;
-            // $address->locality = $request['locality'];
-            // $address->city = $request['city'];
-            // $address->state = $request['state'];
-            // $address->country = $request['country'];
-            // $address->pincode = $request['pincode'];
-            // $address->save();
             // Getting the ID from the Auth
             $userId = Auth::id();
             // dd($userId);
@@ -69,11 +59,9 @@ class AddressController extends Controller
                 'pincode' => $request->pincode
             ]);
 
-            dd($userId);
-
             return redirect()->back()->withMessage(Lang::get('address.success'));
         } catch (\Throwable $th) {
-            echo $th;
+            echo "Error While Address ", $th;
         }
     }
 

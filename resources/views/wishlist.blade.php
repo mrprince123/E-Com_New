@@ -53,7 +53,7 @@
                     <p class="text-slate-500 mb-auto">{{ $shortDesc }}...</p>
                     <div class="flex gap-2 mt-2">
                         {{-- For Add To Cart Button  --}}
-                        <form action="{{ url('/add/cart/' . $product->id) }}" method="post">
+                        <form action="{{ url('/add/cart/' . $product->id) }}" class="w-1/2" method="post">
                             @csrf
                             @method('POST')
                             <input type="number" hidden name="user_id" value="{{ Auth::id() }}">
